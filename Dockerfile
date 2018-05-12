@@ -10,8 +10,8 @@ COPY jupyter_notebook_config.py /root/.jupyter/
 
 
 RUN apt-get update \
-	&& sudo apt-get upgrade \
-	&& sudo apt-get install libatlas-base-dev gfortran pkg-config libfreetype6-dev \
+	&& apt-get upgrade \
+	&& apt-get install libatlas-base-dev gfortran pkg-config libfreetype6-dev \
 	&& wget https://downloads.sourceforge.net/project/ta-lib/ta-lib/0.4.0/ta-lib-0.4.0-src.tar.gz \
 	&& tar xvf ta-lib-0.4.0-src.tar.gz \
 	&& cd ta-lib \
